@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<!--
+* CoreUI - Free Bootstrap Admin Template
+* @version v2.0.0
+* @link https://coreui.io
+* Copyright (c) 2018 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+
+<html lang="en">
+
+<head>
+  <base href="./">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+  <meta name="author" content="Łukasz Holeczek">
+  <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+  <title>社团简介</title>
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <!-- Icons-->
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="vendors/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+  <link href="vendors/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+  <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="vendors/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+  <!-- Main styles for this application-->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+</head>
+
+<body class="app header-fixed aside-menu-fixed">
+  
+  <div class="app-body">
+    <div class="sidebar">
+      <nav class="sidebar-nav">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="nav-icon icon-speedometer"></i> Dashboard
+              <span class="badge badge-primary">NEW</span>
+            </a>
+          </li>
+          <li class="nav-title">Theme</li>
+          <li class="nav-item">
+            <a class="nav-link" href="colors.html">
+              <i class="nav-icon icon-drop"></i> Colors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="typography.html">
+              <i class="nav-icon icon-pencil"></i> Typography</a>
+          </li>
+          <li class="nav-title">Components</li>
+          <li class="nav-item nav-dropdown">
+            <a class="nav-link nav-dropdown-toggle" href="#">
+              <i class="nav-icon icon-puzzle"></i> Base</a>
+            <ul class="nav-dropdown-items">
+              <li class="nav-item">
+                <a class="nav-link" href="base/breadcrumb.html">
+                  <i class="nav-icon icon-puzzle"></i> Breadcrumb</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="base/cards.html">
+                  <i class="nav-icon icon-puzzle"></i> Cards</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="base/carousel.html">
+                  <i class="nav-icon icon-puzzle"></i> Carousel</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="base/collapse.html">
+                  <i class="nav-icon icon-puzzle"></i> Collapse</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="base/forms.html">
+                  <i class="nav-icon icon-puzzle"></i> Forms</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="base/jumbotron.html">
+                  <i class="nav-icon icon-puzzle"></i> Jumbotron</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="base/list-group.html">
+                  <i class="nav-icon icon-puzzle"></i> List group</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="base/navs.html">
+                  <i class="nav-icon icon-puzzle"></i> Navs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="base/pagination.html">
+                  <i class="nav-icon icon-puzzle"></i> Pagination</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="base/popovers.html">
+                  <i class="nav-icon icon-puzzle"></i> Popovers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="base/progress.html">
+                  <i class="nav-icon icon-puzzle"></i> Progress</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="base/scrollspy.html">
+                  <i class="nav-icon icon-puzzle"></i> Scrollspy</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="base/switches.html">
+                  <i class="nav-icon icon-puzzle"></i> Switches</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="base/tables.html">
+                  <i class="nav-icon icon-puzzle"></i> Tables</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="base/tabs.html">
+                  <i class="nav-icon icon-puzzle"></i> Tabs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="base/tooltips.html">
+                  <i class="nav-icon icon-puzzle"></i> Tooltips</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item nav-dropdown">
+            <a class="nav-link nav-dropdown-toggle" href="#">
+              <i class="nav-icon icon-cursor"></i> Buttons</a>
+            <ul class="nav-dropdown-items">
+              <li class="nav-item">
+                <a class="nav-link" href="buttons/buttons.html">
+                  <i class="nav-icon icon-cursor"></i> Buttons</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="buttons/button-group.html">
+                  <i class="nav-icon icon-cursor"></i> Buttons Group</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="buttons/dropdowns.html">
+                  <i class="nav-icon icon-cursor"></i> Dropdowns</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="buttons/brand-buttons.html">
+                  <i class="nav-icon icon-cursor"></i> Brand Buttons</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="charts.html">
+              <i class="nav-icon icon-pie-chart"></i> Charts</a>
+          </li>
+          <li class="nav-item nav-dropdown">
+            <a class="nav-link nav-dropdown-toggle" href="#">
+              <i class="nav-icon icon-star"></i> Icons</a>
+            <ul class="nav-dropdown-items">
+              <li class="nav-item">
+                <a class="nav-link" href="icons/coreui-icons.html">
+                  <i class="nav-icon icon-star"></i> CoreUI Icons
+                  <span class="badge badge-success">NEW</span>
+                </a>
+                <a class="nav-link" href="icons/flags.html">
+                  <i class="nav-icon icon-star"></i> Flags</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="icons/font-awesome.html">
+                  <i class="nav-icon icon-star"></i> Font Awesome
+                  <span class="badge badge-secondary">4.7</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="icons/simple-line-icons.html">
+                  <i class="nav-icon icon-star"></i> Simple Line Icons</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item nav-dropdown">
+            <a class="nav-link nav-dropdown-toggle" href="#">
+              <i class="nav-icon icon-bell"></i> Notifications</a>
+            <ul class="nav-dropdown-items">
+              <li class="nav-item">
+                <a class="nav-link" href="notifications/alerts.html">
+                  <i class="nav-icon icon-bell"></i> Alerts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="notifications/badge.html">
+                  <i class="nav-icon icon-bell"></i> Badge</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="notifications/modals.html">
+                  <i class="nav-icon icon-bell"></i> Modals</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="widgets.html">
+              <i class="nav-icon icon-calculator"></i> Widgets
+              <span class="badge badge-primary">NEW</span>
+            </a>
+          </li>
+          <li class="divider"></li>
+          <li class="nav-title">Extras</li>
+          <li class="nav-item nav-dropdown">
+            <a class="nav-link nav-dropdown-toggle" href="#">
+              <i class="nav-icon icon-star"></i> Pages</a>
+            <ul class="nav-dropdown-items">
+              <li class="nav-item">
+                <a class="nav-link" href="login.html" target="_top">
+                  <i class="nav-icon icon-star"></i> Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="register.html" target="_top">
+                  <i class="nav-icon icon-star"></i> Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="404.html" target="_top">
+                  <i class="nav-icon icon-star"></i> Error 404</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="500.html" target="_top">
+                  <i class="nav-icon icon-star"></i> Error 500</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item mt-auto">
+            <a class="nav-link nav-link-success" href="https://coreui.io" target="_top">
+              <i class="nav-icon icon-cloud-download"></i> Download CoreUI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-danger" href="https://coreui.io/pro/" target="_top">
+              <i class="nav-icon icon-layers"></i> Try CoreUI
+              <strong>PRO</strong>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+    </div>
+    <main class="main">
+      <!-- Breadcrumb-->
+      <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+              <a href="index2.html">社团首页</a>
+            </li>
+        <li class="breadcrumb-item"><a>社团简介</a></li>
+        <li class="breadcrumb-item"><a href="HDGL.html">活动管理</a></li>
+        <li class="breadcrumb-item"><a href="CYGL.html">会员管理</a></li>
+       
+        <!-- Breadcrumb Menu-->
+      </ol>
+      <div class="text-center">
+      <table id="pageright" valign="top">
+        <div id="position">
+        <div class="positionleft"></div>
+        <div class="positionmid"></div>
+        <div class="positionright">您现在的位置是 : <a href="">首页</a><a href="zoujinxiaoyuan/">团学风采</a><a href="zoujinxiaoyuan/xueshengshetuan/">学生社团</a></div></div>
+        <div id="content">
+              <div id="content_head">
+                <!--文章标题-->
+                <h1>大学生软件技术研究协会</h1>
+                <!--基本属性-->
+                <h2><span>2017-04-19</span> 作者：校团委 来源： 浏览次数：<span id="hits">1446</span> 
+            </h2>
+              </div>
+              <!--简单描述-->
+                    <!--正文-->
+              <div id="endtext">
+        <!--判断阅读权限-->
+        <!--判断是否已经扣点-->
+        <p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">为了加强</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">社团成员</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">的监督</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">检查</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">，改善</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">软件 协会</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">的管理，提高工作效率，促进</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">软件协会</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">的发展，特制定本条例。本条例由</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">软件协会督察部</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">负责实施，适用于广州商学院学</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">院</span>软件协会</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">。凡是广州商学院</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">软件协会</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">的一员违反本条例，都必须受到追究。</span></span></p><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">第一章</span></span></strong><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold">&nbsp;&nbsp;</span></strong><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">总</span></span></strong><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold">&nbsp;</span></strong><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">则</span></span></strong></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">第一条</span></span></strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">&nbsp;<span style="FONT-FAMILY: 仿宋_GB2312">社团名称</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">广州商学院大学生</span>软件技术研究协会【简称软件（Building Information Modeling）协会。</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">第二条</span></span></strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">&nbsp;<span style="FONT-FAMILY: 仿宋_GB2312">社团价值观</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">敢于担当，与时俱进，自学分享，互助进步。</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">第三条</span></span></strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">&nbsp;<span style="FONT-FAMILY: 仿宋_GB2312">社团宗旨</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">引导学员做一个能精益建造和集约管理的准工程师。</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">第四条</span> </span></strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">社团任务</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">第一，在我校应用型人才培养理念的指导下，通过开展关于</span>软件理念的学习，让学生们对软件领域知识有更全面、更透彻的认识，逐渐养成以软件的思维解决工程中可能遇到的问题的习惯，同时以新的技术推动工程建设的现代化发展，积极配合国家的“十二五”规划。协会活动突出并强化专业的理论知识、弥补教学中实践部分，引导协会成员并重专业知识与实践技能，以适应当前建筑业发展态势和现代化建设需要，立志成为服务于现代建筑业的复合型高级应用人才。</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">第二，广州商学院大学生</span>软件协会将充分发掘优势潜力资源，抓住机遇与南昌大学、南昌航空大学建立联谊关系，不断提高自身实力来迎接全国建筑信息模型大赛；并希望尽快联合省内其他兄弟院校成立江西省软件高校联盟，打造一个校际合作交流平台，向社会各界展示我们赣江学子的风采。</span></p><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">第二章</span> &nbsp;<span style="FONT-FAMILY: 仿宋_GB2312">会</span> <span style="FONT-FAMILY: 仿宋_GB2312">员</span></span></strong></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">第五条</span></span></strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">&nbsp;</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">凡本校注册的学生，愿遵守本章程，满足下列条件，切可加入本协会。</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">1、</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">遵守中华人民共和国宪法、法律和法规，遵守校纪校规。</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">2、</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">思想健康，积极向上。</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">注</span>:被正式录用后，会员交纳会费（30元）以及一寸蓝底或红底的照片，填写有关表格，协会发会员证；会员在自动退出或被协会除名后，须交还会员证。</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">第六条</span></span></strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">&nbsp;</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">会员的义务</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">1、</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">热爱祖国，热爱人民，拥护中国共产党，坚持党的路线、方针、政策。</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">2、</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">热爱校园，遵守校纪校规。</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">3、</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">积极参加本</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">社团</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">组织的各项活动，支持</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">大学生</span>软件技术研究协会</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">各项工作。</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">4、</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">注意自我形象，</span></span><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; LETTER-SPACING: 0px; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">社员必须承认</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">大学生</span>软件技术研究协会</span><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; LETTER-SPACING: 0px; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">章程，遵守社员管理条例和其他的有关条例。社员违反</span></span><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; LETTER-SPACING: 0px; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">协会</span></span><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; LETTER-SPACING: 0px; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">有关条例或做出损害训练营利益的行为，</span></span><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; LETTER-SPACING: 0px; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">协会会长</span></span><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; LETTER-SPACING: 0px; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">根据情节的严重性有权做出降低或取消社员资格的决定；</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">5、</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">积极给管理者提供良好的建议和想法，共同创建美好的社会环境。</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">6、</span><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; LETTER-SPACING: 0px; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">具有热情和奉献精神，积极参与训练营组织的各项活动</span></span><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; LETTER-SPACING: 0px; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">，</span></span><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; LETTER-SPACING: 0px; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">服从训练营的工作安排，追求锻炼自身能力为目标；成为训练营的主人翁，为训练营的发展出谋划策，踏实奉献，积极完成训练营交给的工作。</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">第七条</span> </span></strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">会员加分减分制</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">一、扣分制度</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">1、</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">缺席：不列席应当参加的会议</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">和教学、大赛等</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">活动且</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">在</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">会议</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">和活动开始前一小时未</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">向所在部部长请假</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">（会议及活动进行十分钟后未到者均为缺席）</span> &nbsp;<span style="FONT-FAMILY: 仿宋_GB2312">扣</span>10分/次</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">2、</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">迟到：未准时列席议</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">和活动</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">&nbsp;&nbsp;<span style="FONT-FAMILY: 仿宋_GB2312">扣</span>5分/次</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">3、</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">部门</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">会议缺席</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">人数</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">超过</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">50%时，</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">第二天同一时间</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">，</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">同一地点由</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">部长</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">补会。迟到两次按一次缺席计，迟到三次按两次无故缺席计，以此类推，并扣月考核分。</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">4、</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">早退：会议</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">和活动</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">结束前未经过负责人同意自行离开者视为早退，早退折算方法同于迟到。</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">5、</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">请假：有事却不能参加会议（活动），必须提前</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">一个小时</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">请假。三次请假按一次故缺席计，五次缺席按两次无故缺席计，以此类推，并扣除部门月考核分</span>.</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">6、</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">请假者必须在会议（活动）前向</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">各部长递交请假条，说明请假原由，</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">并交于</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">督察部</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">7、</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">出席会议和参加活动必须佩戴工作证。对没佩戴工作证的</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">人员</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">给予提醒，并扣月分</span>3分/次。</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">8、会议教学地点和办公室卫生由各部门部长安排，未打扫卫生者，扣5分</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">/次</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">，未打扫干净或未将办公物品归位者。扣</span>3分</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">/次</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">9、出勤率低于90%者扣2分；出勤率低于85%者扣4分；出勤率低于80%者扣6分</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">/次</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">，并通报批评。</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">10、未完成建模，即未能及时上交建模作品的部门，所有部员集体扣15分</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">/次</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">二、加分制度</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">1、</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">日常工作中，每月内会议</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">和</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">活动者全到者</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">--</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">&nbsp;</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">+10</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">分</span>/次</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">2、</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">受</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">部长客观地</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">表扬</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">者</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">--</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">&nbsp;+</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">3</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">分</span>/次</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">3、</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">由于本社团推荐而受</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">校级表彰</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">者</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">-- </span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">+10/次</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">，由于本社团推荐而</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">受院级表彰</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">者</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">--- </span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">+5分/次</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">4、</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">被评为月优秀</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">干事者</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">--- +10</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">分</span>/次</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">5、作业完成优秀者-- +3</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">/次</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">；一般者</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">-- +</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">2分</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">/次</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">；</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">未完成，但有大概样子各部长视情况而定</span>--- +1分或0分/次，无故未做作业者每月超过三次警告一次</span></p><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">第三章</span></span></strong><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold">&nbsp;</span></strong><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold">&nbsp;</span></strong><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">组织机构</span></span></strong><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">与职能</span></span></strong></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><strong><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; LETTER-SPACING: 0px; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">第八条</span> </span></strong><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; LETTER-SPACING: 0px; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">协会总共</span></span><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; LETTER-SPACING: 0px; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">设</span></span><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; LETTER-SPACING: 0px; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">九分</span></span><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; LETTER-SPACING: 0px; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">部，包括宣传部、组织部</span></span><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; LETTER-SPACING: 0px; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">、</span></span><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; LETTER-SPACING: 0px; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">办公室</span></span><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; LETTER-SPACING: 0px; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">、</span></span><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; LETTER-SPACING: 0px; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">财务部、外联部、策划部、监察部、信息部和研学部。</span></span></p><table width="593" uetable="null"><tbody><tr style="HEIGHT: 25px" class="firstRow"><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: windowtext 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: windowtext 1px solid; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="top" width="63"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">部门</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: windowtext 1px solid; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="top" width="195"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">部门职责</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: windowtext 1px solid; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="top" width="335"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">说明</span></p></td></tr><tr style="HEIGHT: 39px"><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: windowtext 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" rowspan="2" width="63"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">财务部</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="195"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">负责会费的汇总</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="335"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">在每个部门新成员加入之后，收齐会费交给财务部统计汇总。</span></p></td></tr><tr style="HEIGHT: 41px"><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="195"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">活动经费的预算</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="335"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">活动之前，把活动所需费用提前预算出来，控制经费的支出，负责协会办公用品的采办。</span></p></td></tr><tr style="HEIGHT: 45px"><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: windowtext 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" rowspan="2" width="63"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">组织部</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="195"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">负责组织协会活动</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="335"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">在活动之前，把所需场地布置好。</span></p></td></tr><tr style="HEIGHT: 39px"><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="195"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">组织社团成员参加比赛及学习</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="335"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">有比赛和活动，则由组织部，组织社团成员参加比赛。</span></p></td></tr><tr style="HEIGHT: 127px"><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: windowtext 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="63"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">策划部</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="195"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">负责活动策划</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="335"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">活动举办前一个星期，把活动策划书交给主席团审核，每个学期，策划一次社团郊游的活动，拉近各部门之间的距离。</span></p></td></tr><tr style="HEIGHT: 46px"><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: windowtext 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" rowspan="2" width="63"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">宣传部</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="195"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">负责社团公众号的管理</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="335"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">负责在公众号上面推广协会举办的活动，在总群里面发布最新的软件信息和动态。</span></p></td></tr><tr style="HEIGHT: 45px"><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="195"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">宣传资料的制作</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="335"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">在协会举办活动时，负责宣传资料的制作。</span></p></td></tr><tr style="HEIGHT: 40px"><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: windowtext 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" rowspan="3" width="63"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">办公部</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="195"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">收集社团人员信息</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="335"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">新学期开始收集每个新成员的信息并备案。</span></p></td></tr><tr style="HEIGHT: 40px"><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="195"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">负责社团上课签到</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="335"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">社团上课时负责记录每个成员的考勤。</span></p></td></tr><tr style="HEIGHT: 40px"><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="195"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">大型活动记录</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="335"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">对活动的流程及重要讲话进行记录</span></p></td></tr><tr style="HEIGHT: 41px"><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: windowtext 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" rowspan="2" width="63"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">督察部</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="195"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">负责维持秩序</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="335"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">负责维持课前秩序以及维持社团举办的大型活动的会场秩序。</span></p></td></tr><tr style="HEIGHT: 41px"><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="195"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">督查作业完成情况</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="335"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">对每个部门的作业完成情况进行考核，最后汇总给办公部备案。</span></p></td></tr><tr style="HEIGHT: 41px"><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: windowtext 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" rowspan="2" width="63"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">信息部</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="195"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">收集最新软件资讯</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="335"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">从网络或书籍上收集最新的软件信息，编辑排版后发布到总群及公众号里供社团成员学习。</span></p></td></tr><tr style="HEIGHT: 41px"><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="195"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">收集社团成员的反馈信息</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="335"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">通过收集反馈信息来提升我们上课的教学质量，对教学方案进行改进</span></p></td></tr><tr style="HEIGHT: 41px"><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: windowtext 1px solid; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" rowspan="2" width="63"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">外联部</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="195"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">租借物品</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="335"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">对上课教室和活动需要使用的场地进行租借</span></p></td></tr><tr style="HEIGHT: 41px"><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="195"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">校外联谊</span></p></td><td style="BORDER-BOTTOM: windowtext 1px solid; BORDER-LEFT: #f0f0f0; PADDING-BOTTOM: 0px; BACKGROUND-COLOR: transparent; PADDING-LEFT: 7px; PADDING-RIGHT: 7px; BORDER-TOP: #f0f0f0; BORDER-RIGHT: windowtext 1px solid; PADDING-TOP: 0px" valign="center" width="335"><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric; VERTICAL-ALIGN: middle"><span style="FONT-STYLE: normal; FONT-FAMILY: 仿宋_GB2312; COLOR: rgb(0,0,0); FONT-SIZE: 21px">与外界的高校联谊，进行软件技术的交流切磋。</span></p></td></tr></tbody></table><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">第四章</span></span></strong><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold">&nbsp;</span></strong><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold">&nbsp;</span></strong><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">活</span></span></strong><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold">&nbsp;</span></strong><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">动</span></span></strong></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">第九条</span> <span style="FONT-FAMILY: 仿宋_GB2312">社团技术学习</span></span></strong></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">(一)目前技术针对Revit2014软件，在</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">以下三</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">大环境中的建模：</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><br></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">项目</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><br></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">&nbsp;&nbsp;&nbsp;&nbsp;<span style="FONT-FAMILY: 仿宋_GB2312">在</span>revit这个软件平台当中，项目主要是指包含所有数据信息的总数据库,信息化建筑模型。项目包含了建筑设计整个过程中的全部数据信息，从简单的几何模型数据到最后的施工图数据都包含在这个项目的数据库中。其中这些信息还包括古建筑模型中所用到的所有建筑构件，项目视图及最后的施工图等数据信息。通过共享一个数据源，建筑模型中一处更新，与之相关的各处（平面、立面、剖面、表单等）则同步更新。这样仅需跟踪一个文件就可以方便地进行项目的管理。&nbsp;</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">族</span></span></strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><br></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">&nbsp;&nbsp;&nbsp;&nbsp;<span style="FONT-FAMILY: 仿宋_GB2312">在</span>revit的族编辑平台中，此软件中的所有图元都是基于族来实现的，我们可以根据自己建模的需要建立相关的模型或详图构件。并设置不同类型的参数以满足使用变化的要求。族就类似于几何图形的一个编组，可以灵活地适应建筑师的创作要求，来创建一些满足作图要求的参数化构件。应用族创建的模型，修改项目模型中的一个构件时，其他和他相同族的构建可以自动的更新。族编辑平台提供了较为完整的建模方式，参数类型，参数赋值方式。并通过嵌套族的使用传递相应的参数值。使用族主要是创建符合本项目设计标准的常用构件。如建筑门、窗、室内的家具，结构基础、构造柱，结构架、结构梁和板式楼梯。都可以用revit软件中的族来实现。</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><br></span><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">体量</span>&nbsp;</span></strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><br></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">&nbsp;&nbsp;&nbsp;Revit中的体量工具是概念设计中的核心模型，在项目的概念设计阶段或设计的前期，用户往往需要从建筑的形体和大的体块关系入手。运用体块模型能够很快的分析和推敲建筑形体和空间。你用体量分析工具能快速统计楼层，面积等指标。方便用户根据设计要求快速调整体量模型。其次的一个主要的功能就是，revit体量工具提供的更加直观的更加强大的体量创建和修改工具。对不规则型体建模有了更好的支持，而且在概念设计完成后，可以将其量模型载入项目中直接转换为楼板、墙体、幕墙和屋顶，并可以进一步深入和丰富完整，初步设计和设计图设计模型。</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><br></span><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">项目、族和体量之间关系</span></span></strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><br></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">&nbsp;&nbsp;&nbsp;&nbsp;<span style="FONT-FAMILY: 仿宋_GB2312">从三者的功能都可以看出族和体量都是为了建立项目的建筑信息模型服务的，项目中的一些建筑构件不容满足建筑工程师做建筑模型的需要时，我们就可以用族来简历一些相应的构件来满足做建筑模型的需求。体量主要使用在我们知道建立模型的地块和高度时，可以由体量族快速地创建一个最大化建筑面积的自由形体，还可以用来建立复杂先进的建筑模型。</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">因此，我们所要掌握的就能够独立完成三大环境的建模和三大环境联合运用，以达到建筑所需要得各种信息。</span></span><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><br></span></strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">（二）社团成员建模：</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><br></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">&nbsp;&nbsp;由各部部长带本部人员在校内公共设施，比如：垃圾桶、路灯、桥、教室座椅、讲台、电灯、风扇、篮球架、十二生肖、停车场等校内可建模型，以小型模型比例必须按&nbsp;1:1&nbsp;要求建模的要求。为了保证建模作品的完成效果，建模先进行实物测量(带好需要测量的工具，比如皮尺、笔、纸)&nbsp;，由部长负责具体讲解如何建模，有什么步骤、方法，利用族做各模型，要求是各部门本学期每周上交一个模型。并将建模完成的作品情况根据考核制度，在本学期在进行建模上完成了作品要求，很好的提高了社团成员的建模和识图能力，不足的很多没有在规定的时间内完成，有所拖延。</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">第十条</span> <span style="FONT-FAMILY: 仿宋_GB2312">建模比赛</span></span></strong></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">为了激发大家对</span>软件的兴趣，营造一个欢乐的学习氛围，提高大家的操作水平，增强大家的就业竞争力。学校和社团鼓励学员能够勇于参加各种建模大赛。</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">1、校园大赛：</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">学校每年都会举行</span>软件建模大赛，第一届“子橙杯”软件建模大赛、第二届“南工杯”软件建模大赛皆圆满结束，取得了令人理想的成绩。学校也将继续举办软件建模大赛，欢迎软件爱好者踊跃参与。</span><strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: bold">&nbsp;</span></strong></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">2、全国大赛：</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">（一）、全国</span>软件建模师等级考试。</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">（二）、如</span>“斯维尔杯”软件建模比赛等。</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal">3、</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">活动基本制度：</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">（</span>1）</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">、</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">部门成员上交本学期课程表，由</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">会长助理</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">统一安排每周值班表和活动，设点排班，允许内部自行调整</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">。</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">（</span>2）</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">、每次活动设立活动总负责人一名及</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">会长助理</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">，主持活动前期的</span>“动员会”对活动中可能出现的问题及时提出解决方案等</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">。</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">（</span>3）</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">、活动结束后，活动负责人总结工作，举行活动总结会议，并要求写好活动总结报告（打印版、电子版各一份）</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">。</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">（</span>4）</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">、</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">举办活动当天，请全体成员提前到场做好准备工作，并佩戴工作证，有特殊情况及时请假，请勿提前离场</span></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">。</span></span></p><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">（</span>5）</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">、活动重要内容成员之间要互相通知，明确工作。</span></span><strong><span style="FONT-FAMILY: 仿宋_GB2312; BACKGROUND: rgb(255,255,255); COLOR: rgb(51,51,51); FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">第五章</span></span></strong><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">&nbsp;&nbsp;</span><strong><span style="FONT-FAMILY: 仿宋_GB2312; BACKGROUND: rgb(255,255,255); COLOR: rgb(51,51,51); FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">办公室使用规章制度</span></span></strong></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><strong><span style="FONT-FAMILY: 仿宋_GB2312; BACKGROUND: rgb(255,255,255); FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">第十一条</span> </span></strong><span style="FONT-FAMILY: 仿宋_GB2312; BACKGROUND: rgb(255,255,255); FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">为了进一步完善协会规章制度，加强协会工作纪律的明确性，协调各部门的关系，提高办事效率，促进协会日常工作的开展，特定办公室使用制度做如下规定：</span></span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; BACKGROUND: rgb(255,255,255); FONT-SIZE: 21px; FONT-WEIGHT: normal">1.各值日部长必须到办公室开会签到，若因故不能来者，须向主席团说明原因。</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; BACKGROUND: rgb(255,255,255); FONT-SIZE: 21px; FONT-WEIGHT: normal">2.进入办公室必须穿戴整洁，言行举止要具有大学生风范。</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; BACKGROUND: rgb(255,255,255); FONT-SIZE: 21px; FONT-WEIGHT: normal">3.不得在办公室内高声喧闹，及进行其他一切影响工作的活动。</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; BACKGROUND: rgb(255,255,255); FONT-SIZE: 21px; FONT-WEIGHT: normal">4.办公室严禁吸烟、酗酒。</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; BACKGROUND: rgb(255,255,255); FONT-SIZE: 21px; FONT-WEIGHT: normal">5.接待来访人员均要热情大方。</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; BACKGROUND: rgb(255,255,255); FONT-SIZE: 21px; FONT-WEIGHT: normal">6.办公室内一切协会资料，只限定本协会的部长及有关人员方可翻阅，办公部定时整理。</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; BACKGROUND: rgb(255,255,255); FONT-SIZE: 21px; FONT-WEIGHT: normal">7.协会的一切办公，学习物品不得随意带走或借出，若须借出必须征得主席团或部长的同意。</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; BACKGROUND: rgb(255,255,255); FONT-SIZE: 21px; FONT-WEIGHT: normal">8.保持办公室内的环境整洁。各部门在使用办公室后要打扫并关好门窗，自觉放好桌凳，把一切东西摆放整齐。</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; BACKGROUND: rgb(255,255,255); FONT-SIZE: 21px; FONT-WEIGHT: normal">9.协会会员必须爱护办公室及公共设施，损坏物品需赔偿。未经协会主席团批准，任何人不得以个人或组织使用及外借办公室物品。如有使用需要，需提出书面申请，经同意后由财务部存档，清点后方可。所借应及时归还，如有损坏、遗失，由申请者承担赔偿责任。</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; BACKGROUND: rgb(255,255,255); FONT-SIZE: 21px; FONT-WEIGHT: normal">10.办公室钥匙（５把）由办公</span><span style="FONT-FAMILY: 仿宋_GB2312; BACKGROUND: rgb(255,255,255); FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">部</span></span><span style="FONT-FAMILY: 仿宋_GB2312; BACKGROUND: rgb(255,255,255); FONT-SIZE: 21px; FONT-WEIGHT: normal"><span style="FONT-FAMILY: 仿宋_GB2312">统一管理，未经协会主席批准，任何人不得私藏、私借、私配。</span></span></p><p style="TEXT-ALIGN: center; LINE-HEIGHT: 33px; TEXT-AUTOSPACE: ideograph-numeric"><strong><span style="FONT-FAMILY: 仿宋_GB2312; BACKGROUND: rgb(255,255,255); FONT-SIZE: 21px; FONT-WEIGHT: bold"><span style="FONT-FAMILY: 仿宋_GB2312">第六章</span> &nbsp;<span style="FONT-FAMILY: 仿宋_GB2312">附</span> <span style="FONT-FAMILY: 仿宋_GB2312">则</span></span></strong></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">1、每月评选3名优秀干事。</span></p><p style="TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: justify; LINE-HEIGHT: 33px; TEXT-INDENT: 43px; TEXT-AUTOSPACE: ideograph-numeric"><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">2、每月评选1个优秀部门。</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><br></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">&nbsp;&nbsp;&nbsp;&nbsp;3、每学年评分优异者优先考虑评选为骨干培训人员、入党积极分子和国家奖助学金获得者。</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><br></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">&nbsp;&nbsp;&nbsp;&nbsp;4、实习、病假或因上课不能参加会议（活动）不记入请假次数，但必须出示有效证明。如有发现作假按缺席计，并内部通报批评。</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><br></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">&nbsp;&nbsp;&nbsp;&nbsp;5、因负责人通知失误而造成的缺席、迟到等，由负责人承担相应的责任。</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><br></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px">&nbsp;&nbsp;&nbsp;&nbsp;6、对于评分低于60分的人员将在部门内部给予提醒，评分低于50分的在全体大会以及社团群中给予警告，警告以上以及被警告两次的人员，需要手写一份不少于500字的检讨材料给与会长助理，对于分数低于40分的成员将给予通报批评，通报次数达到两次的人员将被清除本协会。</span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><br></span><span style="FONT-FAMILY: 仿宋_GB2312; FONT-SIZE: 21px"><span style="FONT-FAMILY: 仿宋_GB2312">本制度解释权属广州商学院大学生</span>软件技术研究协会主席团，并由督察部负责执行。</span></p><p></p>  </div>
+            
+                    <!--分页-->
+              <div id="pages"></div>
+        
+         </div>
+          <table width="98%"  cellspacing="0" cellpadding="0"  style="margin:10px auto;">
+          <tbody><tr>
+            <td>上一篇：<a href="zoujinxiaoyuan/xueshengshetuan/2017/0419/2OMDAwMDAwNjk2OQ.html">创翼无人机摄影协会</a></td>
+          </tr>
+        </tbody></table></table></div>
+    </main>
+    <aside class="aside-menu">
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#timeline" role="tab">
+            <i class="icon-list"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#messages" role="tab">
+            <i class="icon-speech"></i>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#settings" role="tab">
+            <i class="icon-settings"></i>
+          </a>
+        </li>
+      </ul>
+      <!-- Tab panes-->
+      <div class="tab-content">
+        <div class="tab-pane active" id="timeline" role="tabpanel">
+          <div class="list-group list-group-accent">
+            <div
+              class="list-group-item list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">
+              Today</div>
+            <div class="list-group-item list-group-item-accent-warning list-group-item-divider">
+              <div class="avatar float-right">
+                <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+              </div>
+              <div>Meeting with
+                <strong>Lucas</strong>
+              </div>
+              <small class="text-muted mr-3">
+                <i class="icon-calendar"></i>  1 - 3pm</small>
+              <small class="text-muted">
+                <i class="icon-location-pin"></i>  Palo Alto, CA</small>
+            </div>
+            <div class="list-group-item list-group-item-accent-info">
+              <div class="avatar float-right">
+                <img class="img-avatar" src="img/avatars/4.jpg" alt="admin@bootstrapmaster.com">
+              </div>
+              <div>Skype with
+                <strong>Megan</strong>
+              </div>
+              <small class="text-muted mr-3">
+                <i class="icon-calendar"></i>  4 - 5pm</small>
+              <small class="text-muted">
+                <i class="icon-social-skype"></i>  On-line</small>
+            </div>
+            <div
+              class="list-group-item list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">
+              Tomorrow</div>
+            <div class="list-group-item list-group-item-accent-danger list-group-item-divider">
+              <div>New UI Project -
+                <strong>deadline</strong>
+              </div>
+              <small class="text-muted mr-3">
+                <i class="icon-calendar"></i>  10 - 11pm</small>
+              <small class="text-muted">
+                <i class="icon-home"></i>  creativeLabs HQ</small>
+              <div class="avatars-stack mt-2">
+                <div class="avatar avatar-xs">
+                  <img class="img-avatar" src="img/avatars/2.jpg" alt="admin@bootstrapmaster.com">
+                </div>
+                <div class="avatar avatar-xs">
+                  <img class="img-avatar" src="img/avatars/3.jpg" alt="admin@bootstrapmaster.com">
+                </div>
+                <div class="avatar avatar-xs">
+                  <img class="img-avatar" src="img/avatars/4.jpg" alt="admin@bootstrapmaster.com">
+                </div>
+                <div class="avatar avatar-xs">
+                  <img class="img-avatar" src="img/avatars/5.jpg" alt="admin@bootstrapmaster.com">
+                </div>
+                <div class="avatar avatar-xs">
+                  <img class="img-avatar" src="img/avatars/6.jpg" alt="admin@bootstrapmaster.com">
+                </div>
+              </div>
+            </div>
+            <div class="list-group-item list-group-item-accent-success list-group-item-divider">
+              <div>
+                <strong>#10 Startups.Garden</strong> Meetup</div>
+              <small class="text-muted mr-3">
+                <i class="icon-calendar"></i>  1 - 3pm</small>
+              <small class="text-muted">
+                <i class="icon-location-pin"></i>  Palo Alto, CA</small>
+            </div>
+            <div class="list-group-item list-group-item-accent-primary list-group-item-divider">
+              <div>
+                <strong>Team meeting</strong>
+              </div>
+              <small class="text-muted mr-3">
+                <i class="icon-calendar"></i>  4 - 6pm</small>
+              <small class="text-muted">
+                <i class="icon-home"></i>  creativeLabs HQ</small>
+              <div class="avatars-stack mt-2">
+                <div class="avatar avatar-xs">
+                  <img class="img-avatar" src="img/avatars/2.jpg" alt="admin@bootstrapmaster.com">
+                </div>
+                <div class="avatar avatar-xs">
+                  <img class="img-avatar" src="img/avatars/3.jpg" alt="admin@bootstrapmaster.com">
+                </div>
+                <div class="avatar avatar-xs">
+                  <img class="img-avatar" src="img/avatars/4.jpg" alt="admin@bootstrapmaster.com">
+                </div>
+                <div class="avatar avatar-xs">
+                  <img class="img-avatar" src="img/avatars/5.jpg" alt="admin@bootstrapmaster.com">
+                </div>
+                <div class="avatar avatar-xs">
+                  <img class="img-avatar" src="img/avatars/6.jpg" alt="admin@bootstrapmaster.com">
+                </div>
+                <div class="avatar avatar-xs">
+                  <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+                </div>
+                <div class="avatar avatar-xs">
+                  <img class="img-avatar" src="img/avatars/8.jpg" alt="admin@bootstrapmaster.com">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane p-3" id="messages" role="tabpanel">
+          <div class="message">
+            <div class="py-3 pb-5 mr-3 float-left">
+              <div class="avatar">
+                <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+                <span class="avatar-status badge-success"></span>
+              </div>
+            </div>
+            <div>
+              <small class="text-muted">Lukasz Holeczek</small>
+              <small class="text-muted float-right mt-1">1:52 PM</small>
+            </div>
+            <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+            <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt...</small>
+          </div>
+          <hr>
+          <div class="message">
+            <div class="py-3 pb-5 mr-3 float-left">
+              <div class="avatar">
+                <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+                <span class="avatar-status badge-success"></span>
+              </div>
+            </div>
+            <div>
+              <small class="text-muted">Lukasz Holeczek</small>
+              <small class="text-muted float-right mt-1">1:52 PM</small>
+            </div>
+            <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+            <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt...</small>
+          </div>
+          <hr>
+          <div class="message">
+            <div class="py-3 pb-5 mr-3 float-left">
+              <div class="avatar">
+                <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+                <span class="avatar-status badge-success"></span>
+              </div>
+            </div>
+            <div>
+              <small class="text-muted">Lukasz Holeczek</small>
+              <small class="text-muted float-right mt-1">1:52 PM</small>
+            </div>
+            <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+            <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt...</small>
+          </div>
+          <hr>
+          <div class="message">
+            <div class="py-3 pb-5 mr-3 float-left">
+              <div class="avatar">
+                <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+                <span class="avatar-status badge-success"></span>
+              </div>
+            </div>
+            <div>
+              <small class="text-muted">Lukasz Holeczek</small>
+              <small class="text-muted float-right mt-1">1:52 PM</small>
+            </div>
+            <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+            <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt...</small>
+          </div>
+          <hr>
+          <div class="message">
+            <div class="py-3 pb-5 mr-3 float-left">
+              <div class="avatar">
+                <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com">
+                <span class="avatar-status badge-success"></span>
+              </div>
+            </div>
+            <div>
+              <small class="text-muted">Lukasz Holeczek</small>
+              <small class="text-muted float-right mt-1">1:52 PM</small>
+            </div>
+            <div class="text-truncate font-weight-bold">Lorem ipsum dolor sit amet</div>
+            <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+              incididunt...</small>
+          </div>
+        </div>
+        <div class="tab-pane p-3" id="settings" role="tabpanel">
+          <h6>Settings</h6>
+          <div class="aside-options">
+            <div class="clearfix mt-4">
+              <small>
+                <b>Option 1</b>
+              </small>
+              <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+                <input class="switch-input" type="checkbox" checked="">
+                <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+              </label>
+            </div>
+            <div>
+              <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.</small>
+            </div>
+          </div>
+          <div class="aside-options">
+            <div class="clearfix mt-3">
+              <small>
+                <b>Option 2</b>
+              </small>
+              <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+                <input class="switch-input" type="checkbox">
+                <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+              </label>
+            </div>
+            <div>
+              <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.</small>
+            </div>
+          </div>
+          <div class="aside-options">
+            <div class="clearfix mt-3">
+              <small>
+                <b>Option 3</b>
+              </small>
+              <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+                <input class="switch-input" type="checkbox">
+                <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+              </label>
+            </div>
+          </div>
+          <div class="aside-options">
+            <div class="clearfix mt-3">
+              <small>
+                <b>Option 4</b>
+              </small>
+              <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+                <input class="switch-input" type="checkbox" checked="">
+                <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+              </label>
+            </div>
+          </div>
+          <hr>
+          <h6>System Utilization</h6>
+          <div class="text-uppercase mb-1 mt-4">
+            <small>
+              <b>CPU Usage</b>
+            </small>
+          </div>
+          <div class="progress progress-xs">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+              aria-valuemax="100"></div>
+          </div>
+          <small class="text-muted">348 Processes. 1/4 Cores.</small>
+          <div class="text-uppercase mb-1 mt-2">
+            <small>
+              <b>Memory Usage</b>
+            </small>
+          </div>
+          <div class="progress progress-xs">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <small class="text-muted">11444GB/16384MB</small>
+          <div class="text-uppercase mb-1 mt-2">
+            <small>
+              <b>SSD 1 Usage</b>
+            </small>
+          </div>
+          <div class="progress progress-xs">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <small class="text-muted">243GB/256GB</small>
+          <div class="text-uppercase mb-1 mt-2">
+            <small>
+              <b>SSD 2 Usage</b>
+            </small>
+          </div>
+          <div class="progress progress-xs">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="10"
+              aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <small class="text-muted">25GB/256GB</small>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <footer class="app-footer">
+    <div>
+      <a href="https://coreui.io">CoreUI</a>
+      <span>&copy; 2018 creativeLabs.</span>
+    </div>
+    <div class="ml-auto">
+      <span>Powered by</span>
+      <a href="https://coreui.io">CoreUI</a>
+    </div>
+  </footer>
+  <!-- Modal -->
+ 
+
+ 
+  
+ 
+  <!-- CoreUI and necessary plugins-->
+  <script src="vendors/jquery/js/jquery.min.js"></script>
+  <script src="vendors/popper.js/js/popper.min.js"></script>
+  <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script src="vendors/pace-progress/js/pace.min.js"></script>
+  <script src="vendors/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+  <script src="vendors/@coreui/coreui/js/coreui.min.js"></script>
+  <script src="vendors/mock/mock-min.js"></script>
+  <script src="vendors/vue/vue.js"></script>
+ 
+</body>
+
+</html>

@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<!--
+* CoreUI - Free Bootstrap Admin Template
+* @version v2.0.0
+* @link https://coreui.io
+* Copyright (c) 2018 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+
+<html lang="en">
+
+<head>
+  <base href="./" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template" />
+  <meta name="author" content="Łukasz Holeczek" />
+  <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard" />
+  <title>活动管理</title>
+  <link rel="shortcut icon" href="img/favicon.ico" />
+  <!-- Icons-->
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link href="vendors/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet" />
+  <link href="vendors/flag-icon-css/css/flag-icon.min.css" rel="stylesheet" />
+  <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="vendors/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" />
+  <!-- Main styles for this application-->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet" />
+</head>
+
+<body class="app header-fixed aside-menu-fixed">
+
+<div class="app-body">
+  <main class="main">
+    <!-- Breadcrumb-->
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <a href="index2.html">社团首页</a>
+      </li>
+      <li class="breadcrumb-item"><a href="STJJ.html">社团简介</a></li>
+      <li class="breadcrumb-item"><a>活动管理</a></li>
+      <li class="breadcrumb-item"><a href="CYGL.html">会员管理</a></li>
+
+      <!-- Breadcrumb Menu-->
+    </ol>
+    <div class="container-fluid" id="users-template">
+      <div class="animated fadeIn">
+        <div class="card">
+          <div class="card-header">
+            <i class="fa fa-users">活动管理</i>
+            <div class="card-header-actions">
+              <button class="btn btn-primary" type="button" v-on:click="SQHD()">
+                <i class="fa fa-plus-circle">申请新活动</i>
+              </button>
+
+              <button class="btn btn-danger" type="button" v-on:click="PLSC()">
+                <i class="fa fa-trash-o">撤销</i>
+              </button>
+            </div>
+          </div>
+          <div class="card-body collapse show" id="collapseExample">
+            <div class="card-body">
+              <table class="table table-responsive-sm table-sm">
+                <thead>
+                <tr>
+                  <th>
+                    <input type="checkbox" v-on:click="QuanXuan()" />
+                  </th>
+                  <th>社团名</th>
+                  <th>活动名</th>
+                  <th>活动主题</th>
+                  <th>活动时间</th>
+                  <th>活动地点</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr v-for="(item,index) in pageItems">
+                  <td>
+                    <input type="checkbox" v-model="item.selected" />{{
+                    item.id
+                    }}
+                  </td>
+                  <td>{{ item.stname }}</td>
+                  <td>{{ item.hdname }}</td>
+                  <td>{{ item.title }}</td>
+                  <td>{{ item.hdtime }}</td>
+                  <td>{{ item.where }}</td>
+                  <td>
+                    <div class="col-6 col-sm-4 col-md-2 col-xl mb-3 mb-xl-0">
+                      <button class="btn btn-success" type="button" v-on:click="edit(index)" data-toggle="modal"
+                              data-target="#editModal">
+                        <i class="fa fa-pencil-square-o">修改</i>
+                      </button>
+                      <button class="btn btn-danger" type="button" data-toggle="modal"
+                              v-on:click="confirmRemove(index)" data-target="#exampleModalCenter">
+                        <i class="fa fa-times-circle" v-on:click="confirmRemove(deleteindex)">撤销</i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <div class="layui-table-page">
+                <div id="layui-table-page1">
+                  <div class="layui-box layui-laypage layui-laypage-default" id="layui-laypage-2">
+                    <button type="button" v-on:click="lastpage()" class="layui-laypage-btn">
+                      上一页</button><span class="layui-laypage-skip"><input type="number" min="1" id="numbpage"  v-model="pageIndexed"
+                                                                          class="layui-input" />页<button type="button" v-on:click="fly()" class="layui-laypage-btn">
+                          确定
+                        </button>
+                        <button type="button" v-on:click="nextpage()" class="layui-laypage-btn">
+                            下一页</button></span><span
+                          class="layui-laypage-limits"><select lay-ignore="" id="counts">
+                          <option value="10" selected="" >10 条/页</option>
+                          <option value="20">20 条/页</option>
+                          <option value="30">30 条/页</option>
+                          <option value="40">40 条/页</option>
+                          <option value="50">50 条/页</option>
+                          <option value="60">60 条/页</option>
+                          <option value="70">70 条/页</option>
+                          <option value="80">80 条/页</option>
+                          <option value="90">90 条/页</option>
+                        </select></span><button type="button" v-on:click="delth()" class="layui-laypage-btn">
+                    确定
+                  </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 删除模态框 -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+           aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">
+                是否撤销该活动
+              </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              注意：撤销后无法恢复！
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                取消
+              </button>
+              <button type="button" class="btn btn-danger" id="delete" v-on:click="remove()" data-toggle="modal"
+                      data-target="#successModal" data-dismiss="modal">
+                确定
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 编辑模态框 -->
+      <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
+           aria-hidden="true">
+        <div class="modal-body">
+          <form class="needs-validation" action="" method="" id="newsts">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="editModalLabel">社团活动编辑表</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form class="needs-validation">
+                    <div class="form-group">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">社团ID</span>
+                          </div>
+                          <input class="form-control" id="stid" v-model="item.id" type="text"
+                                 name="registerDate1" autocomplete="name" />
+                          <div class="input-group-append">
+                                  <span class="input-group-text">
+                                    <i class="fa fa-calendar"></i>
+                                  </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">社团名称</span>
+                          </div>
+                          <input class="form-control" id="stname" v-model="item.stname" type="text"
+                                 name="username3" autocomplete="name"
+                                 pattern="^([\u4e00-\u9fa5.A-Za-z][\u4e00-\u9fa5.A-Za-z0-9-_]{1,10})$" required />
+                          <div class="input-group-append">
+                                  <span class="input-group-text">
+                                    <i class="fa fa-user"></i>
+                                  </span>
+                          </div>
+                          <div class="invalid-feedback">
+                            用户名格式错误！
+                          </div>
+                        </div>
+                      </div>
+                      <div class="alert alert-light" role="alert">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">活动名称</span>
+                          </div>
+                          <input class="form-control" id="hdname" v-model="item.hdname" type="text"
+                                 name="username3" autocomplete="name"
+                                 pattern="^([\u4e00-\u9fa5.A-Za-z][\u4e00-\u9fa5.A-Za-z0-9-_]{1,10})$" required />
+                          <div class="input-group-append">
+                                  <span class="input-group-text">
+                                    <i class="fa fa-user"></i>
+                                  </span>
+                          </div>
+                          <div class="invalid-feedback">
+                            用户名格式错误！
+                          </div>
+                        </div>
+                      </div>
+                      <div class="alert alert-light" role="alert">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">活动时间</span>
+                          </div>
+                          <input class="form-control" id="hdtime" v-model="item.registerDate" type="text"
+                                 name="registerDate1" autocomplete="name" />
+                          <div class="input-group-append">
+                                  <span class="input-group-text">
+                                    <i class="fa fa-calendar"></i>
+                                  </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">活动地点</span>
+                          </div>
+                          <input class="form-control" id="where" v-model="item.where" type="text"
+                                 name="username3" autocomplete="name"
+                                 pattern="^([\u4e00-\u9fa5.A-Za-z][\u4e00-\u9fa5.A-Za-z0-9-_]{1,10})$" required />
+                          <div class="input-group-append">
+                                  <span class="input-group-text">
+                                    <i class="fa fa-user"></i>
+                                  </span>
+                          </div>
+                          <div class="invalid-feedback">
+                            用户名格式错误！
+                          </div>
+                        </div>
+                      </div>
+                      <div class="alert alert-light" role="alert">
+                      </div>
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">活动主题</span>
+                      </div>
+                      <select name="select1" class="form-control" id="title" v-model="item.title">
+                        <option>公益性活动</option>
+                        <option>休闲型活动</option>
+                        <option>学习型活动</option>
+                      </select>
+                      <div class="input-group-append">
+                              <span class="input-group-text">
+                                <i class="fa fa-calendar"></i>
+                              </span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" v-on:click="save()">
+                          提交
+                        </button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                          取消
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+      <!-- 批量删除模态框 -->
+      <div class="modal fade" id="dangerModalCenter" tabindex="-1" role="dialog"
+           aria-labelledby="dangerModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="dangerModalLongTitle">
+                是否撤销该活动
+              </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              注意：撤销后无法恢复！
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                取消
+              </button>
+              <button type="button" class="btn btn-danger" id="deletel" v-on:click="PLSCBatch()">
+                确定
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 新增用户模态框 -->
+      <div class="modal fade" id="primaryyModal" tabindex="-1" role="dialog" aria-labelledby="primaryyModalLabel"
+           aria-hidden="true">
+        <form class="needs-validation" action="" method="" id="newusers">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="primaryyModalLabel">社团活动申请表</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form class="needs-validation">
+                  <div class="form-group">
+
+                  </div>
+                  <div class="form-group">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">社团名称</span>
+                        </div>
+                        <input class="form-control" id="stnames" v-model="item.stname" type="text"
+                               name="username3" autocomplete="name"
+                               pattern="^([\u4e00-\u9fa5.A-Za-z][\u4e00-\u9fa5.A-Za-z0-9-_]{1,10})$" required />
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                              <i class="fa fa-user"></i>
+                            </span>
+                        </div>
+                        <div class="invalid-feedback">
+                          用户名格式错误！
+                        </div>
+                      </div>
+                    </div>
+                    <div class="alert alert-light" role="alert">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">活动名称</span>
+                        </div>
+                        <input class="form-control" id="hdnames" v-model="item.hdname" type="text"
+                               name="username3" autocomplete="name"
+                               pattern="^([\u4e00-\u9fa5.A-Za-z][\u4e00-\u9fa5.A-Za-z0-9-_]{1,10})$" required />
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                              <i class="fa fa-user"></i>
+                            </span>
+                        </div>
+                        <div class="invalid-feedback">
+                          用户名格式错误！
+                        </div>
+                      </div>
+                    </div>
+                    <div class="alert alert-light" role="alert">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">活动时间</span>
+                        </div>
+                        <input class="form-control" id="newdate" v-model="item.hdtime" type="text"
+                               name="registerDate1" autocomplete="name" />
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                              <i class="fa fa-calendar"></i>
+                            </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">活动地点</span>
+                        </div>
+                        <input class="form-control" id="wheres" v-model="item.where" type="text"
+                               name="username3" autocomplete="name"
+                               pattern="^([\u4e00-\u9fa5.A-Za-z][\u4e00-\u9fa5.A-Za-z0-9-_]{1,10})$" required />
+                        <div class="input-group-append">
+                            <span class="input-group-text">
+                              <i class="fa fa-user"></i>
+                            </span>
+                        </div>
+                        <div class="invalid-feedback">
+                          用户名格式错误！
+                        </div>
+                      </div>
+                    </div>
+                    <div class="alert alert-light" role="alert">
+                    </div>
+                  </div>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">活动主题</span>
+                    </div>
+                    <select name="select1" class="form-control" id="titles" v-model="item.title">
+                      <option>公益性活动</option>
+                      <option>休闲型活动</option>
+                      <option>学习型活动</option>
+                    </select>
+                    <div class="input-group-append">
+                        <span class="input-group-text">
+                          <i class="fa fa-calendar"></i>
+                        </span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" v-on:click="addsave()">
+                        提交
+                      </button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        取消
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <aside class="aside-menu">
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#timeline" role="tab">
+          <i class="icon-list"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#messages" role="tab">
+          <i class="icon-speech"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#settings" role="tab">
+          <i class="icon-settings"></i>
+        </a>
+      </li>
+    </ul>
+    <!-- Tab panes-->
+    <div class="tab-content">
+      <div class="tab-pane active" id="timeline" role="tabpanel">
+        <div class="list-group list-group-accent">
+          <div
+                  class="list-group-item list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">
+            Today
+          </div>
+          <div class="list-group-item list-group-item-accent-warning list-group-item-divider">
+            <div class="avatar float-right">
+              <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com" />
+            </div>
+            <div>
+              Meeting with
+              <strong>Lucas</strong>
+            </div>
+            <small class="text-muted mr-3">
+              <i class="icon-calendar"></i> 1 - 3pm</small>
+            <small class="text-muted">
+              <i class="icon-location-pin"></i> Palo Alto, CA</small>
+          </div>
+          <div class="list-group-item list-group-item-accent-info">
+            <div class="avatar float-right">
+              <img class="img-avatar" src="img/avatars/4.jpg" alt="admin@bootstrapmaster.com" />
+            </div>
+            <div>
+              Skype with
+              <strong>Megan</strong>
+            </div>
+            <small class="text-muted mr-3">
+              <i class="icon-calendar"></i> 4 - 5pm</small>
+            <small class="text-muted">
+              <i class="icon-social-skype"></i> On-line</small>
+          </div>
+          <div
+                  class="list-group-item list-group-item-accent-secondary bg-light text-center font-weight-bold text-muted text-uppercase small">
+            Tomorrow
+          </div>
+          <div class="list-group-item list-group-item-accent-danger list-group-item-divider">
+            <div>
+              New UI Project -
+              <strong>deadline</strong>
+            </div>
+            <small class="text-muted mr-3">
+              <i class="icon-calendar"></i> 10 - 11pm</small>
+            <small class="text-muted">
+              <i class="icon-home"></i> creativeLabs HQ</small>
+            <div class="avatars-stack mt-2">
+              <div class="avatar avatar-xs">
+                <img class="img-avatar" src="img/avatars/2.jpg" alt="admin@bootstrapmaster.com" />
+              </div>
+              <div class="avatar avatar-xs">
+                <img class="img-avatar" src="img/avatars/3.jpg" alt="admin@bootstrapmaster.com" />
+              </div>
+              <div class="avatar avatar-xs">
+                <img class="img-avatar" src="img/avatars/4.jpg" alt="admin@bootstrapmaster.com" />
+              </div>
+              <div class="avatar avatar-xs">
+                <img class="img-avatar" src="img/avatars/5.jpg" alt="admin@bootstrapmaster.com" />
+              </div>
+              <div class="avatar avatar-xs">
+                <img class="img-avatar" src="img/avatars/6.jpg" alt="admin@bootstrapmaster.com" />
+              </div>
+            </div>
+          </div>
+          <div class="list-group-item list-group-item-accent-success list-group-item-divider">
+            <div><strong>#10 Startups.Garden</strong> Meetup</div>
+            <small class="text-muted mr-3">
+              <i class="icon-calendar"></i> 1 - 3pm</small>
+            <small class="text-muted">
+              <i class="icon-location-pin"></i> Palo Alto, CA</small>
+          </div>
+          <div class="list-group-item list-group-item-accent-primary list-group-item-divider">
+            <div>
+              <strong>Team meeting</strong>
+            </div>
+            <small class="text-muted mr-3">
+              <i class="icon-calendar"></i> 4 - 6pm</small>
+            <small class="text-muted">
+              <i class="icon-home"></i> creativeLabs HQ</small>
+            <div class="avatars-stack mt-2">
+              <div class="avatar avatar-xs">
+                <img class="img-avatar" src="img/avatars/2.jpg" alt="admin@bootstrapmaster.com" />
+              </div>
+              <div class="avatar avatar-xs">
+                <img class="img-avatar" src="img/avatars/3.jpg" alt="admin@bootstrapmaster.com" />
+              </div>
+              <div class="avatar avatar-xs">
+                <img class="img-avatar" src="img/avatars/4.jpg" alt="admin@bootstrapmaster.com" />
+              </div>
+              <div class="avatar avatar-xs">
+                <img class="img-avatar" src="img/avatars/5.jpg" alt="admin@bootstrapmaster.com" />
+              </div>
+              <div class="avatar avatar-xs">
+                <img class="img-avatar" src="img/avatars/6.jpg" alt="admin@bootstrapmaster.com" />
+              </div>
+              <div class="avatar avatar-xs">
+                <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com" />
+              </div>
+              <div class="avatar avatar-xs">
+                <img class="img-avatar" src="img/avatars/8.jpg" alt="admin@bootstrapmaster.com" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane p-3" id="messages" role="tabpanel">
+        <div class="message">
+          <div class="py-3 pb-5 mr-3 float-left">
+            <div class="avatar">
+              <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com" />
+              <span class="avatar-status badge-success"></span>
+            </div>
+          </div>
+          <div>
+            <small class="text-muted">Lukasz Holeczek</small>
+            <small class="text-muted float-right mt-1">1:52 PM</small>
+          </div>
+          <div class="text-truncate font-weight-bold">
+            Lorem ipsum dolor sit amet
+          </div>
+          <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+            do eiusmod tempor incididunt...</small>
+        </div>
+        <hr />
+        <div class="message">
+          <div class="py-3 pb-5 mr-3 float-left">
+            <div class="avatar">
+              <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com" />
+              <span class="avatar-status badge-success"></span>
+            </div>
+          </div>
+          <div>
+            <small class="text-muted">Lukasz Holeczek</small>
+            <small class="text-muted float-right mt-1">1:52 PM</small>
+          </div>
+          <div class="text-truncate font-weight-bold">
+            Lorem ipsum dolor sit amet
+          </div>
+          <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+            do eiusmod tempor incididunt...</small>
+        </div>
+        <hr />
+        <div class="message">
+          <div class="py-3 pb-5 mr-3 float-left">
+            <div class="avatar">
+              <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com" />
+              <span class="avatar-status badge-success"></span>
+            </div>
+          </div>
+          <div>
+            <small class="text-muted">Lukasz Holeczek</small>
+            <small class="text-muted float-right mt-1">1:52 PM</small>
+          </div>
+          <div class="text-truncate font-weight-bold">
+            Lorem ipsum dolor sit amet
+          </div>
+          <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+            do eiusmod tempor incididunt...</small>
+        </div>
+        <hr />
+        <div class="message">
+          <div class="py-3 pb-5 mr-3 float-left">
+            <div class="avatar">
+              <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com" />
+              <span class="avatar-status badge-success"></span>
+            </div>
+          </div>
+          <div>
+            <small class="text-muted">Lukasz Holeczek</small>
+            <small class="text-muted float-right mt-1">1:52 PM</small>
+          </div>
+          <div class="text-truncate font-weight-bold">
+            Lorem ipsum dolor sit amet
+          </div>
+          <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+            do eiusmod tempor incididunt...</small>
+        </div>
+        <hr />
+        <div class="message">
+          <div class="py-3 pb-5 mr-3 float-left">
+            <div class="avatar">
+              <img class="img-avatar" src="img/avatars/7.jpg" alt="admin@bootstrapmaster.com" />
+              <span class="avatar-status badge-success"></span>
+            </div>
+          </div>
+          <div>
+            <small class="text-muted">Lukasz Holeczek</small>
+            <small class="text-muted float-right mt-1">1:52 PM</small>
+          </div>
+          <div class="text-truncate font-weight-bold">
+            Lorem ipsum dolor sit amet
+          </div>
+          <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+            do eiusmod tempor incididunt...</small>
+        </div>
+      </div>
+      <div class="tab-pane p-3" id="settings" role="tabpanel">
+        <h6>Settings</h6>
+        <div class="aside-options">
+          <div class="clearfix mt-4">
+            <small>
+              <b>Option 1</b>
+            </small>
+            <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+              <input class="switch-input" type="checkbox" checked="" />
+              <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+            </label>
+          </div>
+          <div>
+            <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua.</small>
+          </div>
+        </div>
+        <div class="aside-options">
+          <div class="clearfix mt-3">
+            <small>
+              <b>Option 2</b>
+            </small>
+            <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+              <input class="switch-input" type="checkbox" />
+              <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+            </label>
+          </div>
+          <div>
+            <small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+              do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua.</small>
+          </div>
+        </div>
+        <div class="aside-options">
+          <div class="clearfix mt-3">
+            <small>
+              <b>Option 3</b>
+            </small>
+            <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+              <input class="switch-input" type="checkbox" />
+              <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+            </label>
+          </div>
+        </div>
+        <div class="aside-options">
+          <div class="clearfix mt-3">
+            <small>
+              <b>Option 4</b>
+            </small>
+            <label class="switch switch-label switch-pill switch-success switch-sm float-right">
+              <input class="switch-input" type="checkbox" checked="" />
+              <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
+            </label>
+          </div>
+        </div>
+        <hr />
+        <h6>System Utilization</h6>
+        <div class="text-uppercase mb-1 mt-4">
+          <small>
+            <b>CPU Usage</b>
+          </small>
+        </div>
+        <div class="progress progress-xs">
+          <div class="progress-bar bg-info" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+               aria-valuemax="100"></div>
+        </div>
+        <small class="text-muted">348 Processes. 1/4 Cores.</small>
+        <div class="text-uppercase mb-1 mt-2">
+          <small>
+            <b>Memory Usage</b>
+          </small>
+        </div>
+        <div class="progress progress-xs">
+          <div class="progress-bar bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
+               aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <small class="text-muted">11444GB/16384MB</small>
+        <div class="text-uppercase mb-1 mt-2">
+          <small>
+            <b>SSD 1 Usage</b>
+          </small>
+        </div>
+        <div class="progress progress-xs">
+          <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95"
+               aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <small class="text-muted">243GB/256GB</small>
+        <div class="text-uppercase mb-1 mt-2">
+          <small>
+            <b>SSD 2 Usage</b>
+          </small>
+        </div>
+        <div class="progress progress-xs">
+          <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="10"
+               aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <small class="text-muted">25GB/256GB</small>
+      </div>
+    </div>
+  </aside>
+</div>
+<footer class="app-footer">
+  <div>
+    <a href="https://coreui.io">CoreUI</a>
+    <span>&copy; 2018 creativeLabs.</span>
+  </div>
+  <div class="ml-auto">
+    <span>Powered by</span>
+    <a href="https://coreui.io">CoreUI</a>
+  </div>
+</footer>
+<!-- Modal -->
+<!-- 删除成功模态框 -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalTitle"
+     aria-hidden="true">
+  <div class="modal-dialog modal-success" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="successModalLongTitle">删除成功！</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        该活动已删除
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">
+          确定
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="fistpageModal" tabindex="-1" role="dialog" aria-labelledby="successModalTitle"
+     aria-hidden="true">
+  <div class="modal-dialog modal-success" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="fistpageModalLongTitle">
+          已经是第一页
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        上一页已无内容
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">
+          确定
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="nextpageModal" tabindex="-1" role="dialog" aria-labelledby="successModalTitle"
+     aria-hidden="true">
+  <div class="modal-dialog modal-success" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="nextpageModalLongTitle">
+          已经是最后一页
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        下一页已无内容
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">
+          确定
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="tallerpageModal" tabindex="-1" role="dialog" aria-labelledby="successModalTitle"
+     aria-hidden="true">
+  <div class="modal-dialog modal-success" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="tallerpageModalLongTitle">
+          注意：输入有误
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        暂无该页数
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">
+          确定
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CoreUI and necessary plugins-->
+<script src="vendors/jquery/js/jquery.min.js"></script>
+<script src="vendors/popper.js/js/popper.min.js"></script>
+<script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendors/pace-progress/js/pace.min.js"></script>
+<script src="vendors/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+<script src="vendors/@coreui/coreui/js/coreui.min.js"></script>
+<script src="vendors/mock/mock-min.js"></script>
+<script src="vendors/vue/vue.js"></script>
+<script>
+  var users = [];
+  var qpp;
+  var isCheckAll = false;
+  // var indexs;
+  $(function () {
+    Mock.mock("file:///F:/bangong/Webjiagou/ziyuan/CoreUI/blank.2.html", {
+      "data|1-5": [
+        {
+          picked: "",
+          selected: false,
+          id: "@increment()",
+          "stname|1":["创投协会","法学会","翻译协会","会计协会","九歌汉服协会","日语协会","英语口语训练协会","Ami法语文化协会","金融贸易协会","商务协会","英语新干线协会","旅游协会","香满苑书画协会","乐器协会","正心读书会","光盐戏剧社","Fresh生态环境保护协会","市场营销协会","德语协会","ERP学习社","软件技术学研会","物流协会"],
+          "hdname|1":["百团大战","杯火之心辩论赛"],
+          "title|1":["公益性活动","学习型活动","休闲型活动"],
+          "role|1": ["会员", "小干"],
+          hdtime: "@datetime()",
+          "where|1":["四教301","五教305","四教605"],
+        }
+      ],
+      success: true,
+      code: 200,
+      msg: "Success"
+    });
+
+    $.getJSON(
+            "file:///F:/bangong/Webjiagou/ziyuan/CoreUI/blank.2.html",
+            function (response) {
+              users = response.data;
+              qpp = new Vue({
+                el: "#users-template",
+                data: {
+                  items: users,
+                  deleteindex: -1,
+                  editindex: -1,
+                  item: {
+                    name: ""
+                  },
+                  item: {
+                    status: ""
+                  },
+                  item: {
+                    "role|1": ""
+                  },
+                  pageSize: 10,
+                  pageIndex: 0,
+                  pageIndexed: 1,
+                },
+                computed: {
+                  // 计算属性的 getter
+                  pageItems: function () {
+                    // `this` 指向 vm 实例
+                    var stratIndex = this.pageIndex * this.pageSize;
+                    var endIndex = stratIndex + this.pageSize - 1;
+                    return this.items.filter(function (value, index) {
+                      return index >= stratIndex && index <= endIndex;
+                    });
+                  },
+                  // pagecount: function(){
+                  //   var count = Math.ceil(this.qpp.items.length/this.pageSize);
+                  //   return count;
+                  // }
+                },
+                methods: {
+                  confirmRemove: function (i) {
+                    //获取index
+                    $("#exampleModalCenter").modal("show");
+                    this.deleteindex = i;
+                  },
+                  remove: function () {
+                    //删除index行
+                    this.items.splice(this.deleteindex, 1);
+                    $("#exampleModalCenter").modal("hide");
+                  },
+                  edit: function (index) {
+                    this.editindex = index;
+                    var user = JSON.parse(JSON.stringify(this.items[index]));
+                    this.item = user;
+                    $("#editModal").modal("show");
+                  },
+                  save: function () {
+                    var form = document.getElementsByClassName(
+                            "needs-validation"
+                    )[0];
+                    if (form.checkValidity() === true) {
+                      Vue.set(this.items, this.editindex, this.item);
+                      $("#editModal").modal("hide");
+                    }
+                    form.classList.add('was-validated');
+                  },
+                  PLSC: function () {
+                    //批量获取selected
+                    $("#dangerModalCenter").modal("show");
+                  },
+                  PLSCBatch: function () {
+                    //删除index行
+                    var Numb;
+                    for (Numb = qpp.items.length; Numb > 0; Numb--) {
+                      if (this.items[Numb - 1].selected == true)
+                        this.items.splice(Numb - 1, 1);
+                    }
+                    $("#dangerModalCenter").modal("hide");
+                  },
+                  QuanXuan: function () {
+                    if (isCheckAll == false) {
+                      var x = 0;
+                      for (x = 0; x < qpp.pageSize; x++) {
+                        this.items[x].selected = true;
+                      }
+                      isCheckAll = true;
+                    } else {
+                      var x = 0;
+                      for (x = 0; x < qpp.pageSize; x++) {
+                        this.items[x].selected = false;
+                      }
+                      isCheckAll = false;
+                    }
+                  },
+                  SQHD: function () {
+                    // this.editindex = index;
+                    // var adds = qpp.items.length + 1;
+                    // var user = JSON.parse(JSON.stringify(this.items[adds]));
+                    // this.item = user;
+                    $("#primaryyModal").modal("show");
+                  },
+                  addsave: function () {
+                    var form = document.getElementById("newusers");
+                    // Loop over them and prevent submission
+
+                    if (form.checkValidity() === true) {
+                      qpp.items.push({
+                        selected: false,
+                        id: qpp.items.length + 1,
+                        stname: document.getElementById("stnames").value,
+                        hdname: document.getElementById("hdnames").value,
+                        hdtime: document.getElementById("newdate").value,
+                        where: document.getElementById("wheres").value,
+                        title: document.getElementById("titles").value,
+                      });
+                      $("#primaryyModal").modal("hide");
+                    }
+                    form.classList.add("was-validated");
+                  },
+                  fly: function () {
+                    if (document.getElementById("numbpage").value - 1 >= 0 && document.getElementById("numbpage").value - 1 < qpp.items.length / qpp.pageSize - 1) {
+                      qpp.pageIndex = document.getElementById("numbpage").value - 1;
+                    }else{
+                      $("#tallerpageModal").modal("show");
+                    }
+                  },
+                  delth: function () {
+
+                    Number = document.getElementById("counts").value;
+                    qpp.pageSize = Number
+                  },
+                  lastpage: function () {
+                    qpp.pageIndex = qpp.pageIndex - 1;
+                    qpp.pageIndexed = qpp.pageIndex +1;
+                    if (qpp.pageIndex < 0) {
+                      $("#fistpageModal").modal("show");
+                      qpp.pageIndex = 0;
+                    }
+                  },
+                  nextpage: function () {
+                    qpp.pageIndex = qpp.pageIndex + 1;
+                    qpp.pageIndexed = qpp.pageIndex +1;
+                    if (qpp.pageIndex > qpp.items.length / qpp.pageSize - 1) {
+                      $("#nextpageModal").modal("show");
+                      qpp.pageIndex = Math.ceil( qpp.items.length / qpp.pageSize - 1);
+                    }
+                  }
+                }
+              });
+              return;
+            }
+    );
+  });
+</script>
+<!-- <script>
+  $('#delete').click(function () {
+    $('#exampleModalCenter').modal('hide')
+    $('#successModal').modal('show')
+  })
+</script> -->
+</body>
+
+</html>

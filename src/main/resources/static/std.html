@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!--
+* CoreUI - Free Bootstrap Admin Template
+* @version v2.0.0
+* @link https://coreui.io
+* Copyright (c) 2018 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+
+<html lang="en">
+
+<head>
+  <base href="./">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+  <meta name="author" content="Łukasz Holeczek">
+  <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+  <title>用户管理</title>
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <!-- Icons-->
+  <link href="vendors/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+  <link href="vendors/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+  <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="vendors/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+  <!-- Main styles for this application-->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+</head>
+
+<body class="app header-fixed  aside-menu-fixed ">
+  <div>
+    <div>
+    <main class="main">
+      <!-- Breadcrumb-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="xsd.html">首页</a> </li>
+        <li class="breadcrumb-item">
+          <a >社团一览</a>
+        </li>
+
+        <!-- Breadcrumb Menu-->
+        <li class="breadcrumb-menu d-md-down-none">
+          <div class="btn-group" role="group" aria-label="Button group">
+            <a class="btn" href="#">
+              <i class="icon-speech"></i>
+            </a>
+
+          </div>
+        </li>
+      </ol>
+      <div class="container-fluid" id="bd">
+        <div class="modal fade" id="primaryyModal" tabindex="-1" role="dialog" aria-labelledby="primaryyModalLabel"
+             aria-hidden="true">
+          <form class="needs-validation" action="" method="" id="newsts">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="primaryyModalLabel">申请表</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form class="needs-validation">
+                    <div class="form-group">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">学院</span>
+                          </div>
+                          <select name="select1" class="form-control" id="xueyuan" >
+                            <option>信息技术与工程学院</option>
+                            <option>旅游学院</option>
+                            <option>金融学院</option>
+                            <option>外国语学院</option>
+                          </select>
+                          <div class="input-group-append">
+                            <span class="input-group-text">
+                              <i class="fa fa-calendar"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">学号</span>
+                          </div>
+                          <input class="form-control" id="xuehao"  type="text"
+                                 name="registerDate1" autocomplete="name" />
+                          <div class="input-group-append">
+                            <span class="input-group-text">
+                              <i class="fa fa-calendar"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">姓名</span>
+                          </div>
+                          <input class="form-control" id="newusename"  type="text"
+                                 name="username3" autocomplete="name"
+                                 pattern="^([\u4e00-\u9fa5.A-Za-z][\u4e00-\u9fa5.A-Za-z0-9-_]{1,10})$" required />
+                          <div class="input-group-append">
+                            <span class="input-group-text">
+                              <i class="fa fa-user"></i>
+                            </span>
+                          </div>
+                          <div class="invalid-feedback">
+                            用户名格式错误！
+                          </div>
+                        </div>
+                      </div>
+                      <div class="alert alert-light" role="alert">
+                        <h6>用户名必须2到11位（字母，文字，下划线，减号）</h6>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">社团名称</span>
+                          </div>
+                          <input class="form-control" id="newstname"  type="text"
+                                 name="username3" autocomplete="name"
+                                 pattern="^([\u4e00-\u9fa5.A-Za-z][\u4e00-\u9fa5.A-Za-z0-9-_]{1,10})$" required />
+                          <div class="input-group-append">
+                            <span class="input-group-text">
+                              <i class="fa fa-user"></i>
+                            </span>
+                          </div>
+                          <div class="invalid-feedback">
+                            用户名格式错误！
+                          </div>
+                        </div>
+                      </div>
+                      <div class="alert alert-light" role="alert">
+                        <h6>社团名必须2到11位（字母，文字，下划线，减号）</h6>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-group">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">日期</span>
+                          </div>
+                          <input class="form-control" id="newdate"  type="text"
+                                 name="registerDate1" autocomplete="name" />
+                          <div class="input-group-append">
+                            <span class="input-group-text">
+                              <i class="fa fa-calendar"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">社团性质</span>
+                      </div>
+                      <select name="select1" class="form-control" id="stxz" >
+                        <option>公益性社团</option>
+                        <option>休闲型社团</option>
+                        <option>学习型社团</option>
+                      </select>
+                      <div class="input-group-append">
+                        <span class="input-group-text">
+                          <i class="fa fa-calendar"></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" v-on:click="addsave()">
+                          提交
+                        </button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                          取消
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="animated fadeIn">
+          <div class="card">
+            <div class="card-header">
+              <i class="fa fa-user" aria-hidden="true">社团一览</i>
+              <div class="card-header-actions">
+                <a class="btn btn-ghost-success " v-on:click="xz()">
+                  <button class="btn btn-success btn-lg btn-block" type="button" data-toggle="modal" data-target="#primaryyModal" onclick="SQST()">申请新社团</button>
+                </a>
+
+              </div>
+            </div>
+            <div class="card-body collapse show" id="collapseExample">
+              <table class="table table-responsive-sm table-bordered table-striped table-sm">
+                <thead>
+                  <tr>
+                    <th><input v-model="isCheckAll" type="checkbox" v-on:click="qx()" /></th>
+                    <th>社团名称</th>
+                    <th>社团成立时间</th>
+                    <th>社团人数</th>
+                    <th>社团简介</th>
+                    <th>社团会长</th>
+                    <th>社团状态</th>
+                    <th>操作</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="(items, index) in pageItems">
+                    <td>{{ items.stid }}</td>
+                    <td>{{ items.stname }}</td>
+                    <td>{{ items.cltime }}</td>
+                    <td>{{ items.rs }}</td>
+                    <td>{{ items.jj }}</td>
+                    <td id="js">{{ items.role }}</td>
+                    <td>
+                      <span class="badge badge-success" v-if="items.status=='活跃'">{{ items.status }}</span>
+                      <span class="badge badge-danger" v-if="items.status=='禁用'">{{ items.status }}</span>
+                    </td>
+                    <td>
+                      <button class="btn btn-primary " type="button" v-on:click="">
+                        <i class=" fa fa-edit"><a href=""></a> </i>详情
+                      </button>
+
+                      <button class="btn btn-danger " type="button" v-on:click="">
+                        <i class="fa fa-delicious"></i>加入
+                      </button>
+
+                    </td>
+                  </tr>
+                </tbody>
+                
+
+              </table>
+              <ul class="pagination">
+                <li class="page-item ">
+                  <a class="page-link"  v-on:click="pageIndex = 0;pageIndexz=pageIndex+1">首页</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" v-on:click="pageIndex = pageIndex-1;pageIndexz=pageIndex+1" v-if="pageIndex!=0">上一页</a>
+                </li>
+                
+                <select name="select3" class="pagination" v-model="pageIndexz" >
+                  <option  v-for="n in pageCount" >{{n}}</option>
+                  
+                </select>
+                <li class="page-item ">
+                  <a class="page-link"  v-on:click="pageIndex = pageIndexz-1" >转到</a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" v-on:click="pageIndex = pageIndex+1;pageIndexz=pageIndex+1" v-if="pageIndex!=pageCount-1">下一页</a>
+                </li>
+                <li class="page-item ">
+                  <a class="page-link"  v-on:click="pageIndex = pageCount-1;pageIndexz=pageIndex+1" >尾页</a>
+                </li>
+                
+              </ul>
+              共<span>{{total}}</span>条记录
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  </div>
+  <!-- CoreUI and necessary plugins-->
+  <script src="vendors/jquery/js/jquery.min.js"></script>
+  <script src="vendors/popper.js/js/popper.min.js"></script>
+  <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script src="vendors/pace-progress/js/pace.min.js"></script>
+  <script src="vendors/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+  <script src="vendors/@coreui/coreui/js/coreui.min.js"></script>
+  <script src="vendors/Mock/mock.js"></script>
+  <script src="vendors/vue/vue.min.js"></script>
+  <script src="vendors/vue/vue.js"></script>
+  <script>
+    var users = [];
+    var  app;
+    $(function () {
+
+      $.getJSON("/std", function (response) {
+        users = response;
+        app = new Vue({
+          el: '#bd',
+          data: {
+            items: users,
+            index: -1,
+            bjindex: -1,
+            item: {
+              stname: "",
+              stid: "",
+              cltime: "",
+              "role|1": "",
+              "status|1": "",
+              rs: ""
+            },
+            pageSize: 10,
+            pageIndex: 0,
+            total: users.length,
+            pageIndexz: 1,
+            isCheckAll: false
+          },
+          computed: {
+            // a computed getter
+            pageItems: function () {
+              var startIndex = this.pageIndex * this.pageSize;
+              var endIndex = startIndex + this.pageSize - 1;
+              return this.items.filter(function (value, index) {
+                return (
+                        index >= startIndex &&
+                        index <= endIndex
+                );
+              });
+            },
+            pageCount: function () {
+              var count = Math.ceil(this.total / this.pageSize);
+              return count;
+            }
+          },
+          methods: {
+            SQST: function () {
+              $("#primaryyModal").modal("show");
+            },
+            addsave: function () {
+              var form = document.getElementById("newusers");
+              // Loop over them and prevent submission
+
+              if (form.checkValidity() === true) {
+                qpp.items.push({
+                  selected: false,
+                  id: qpp.items.length + 1,
+                  name: document.getElementById("newusename").value,
+                  role: document.getElementById("newselect").value,
+                  registerDate: document.getElementById("newdate").value,
+                  status: document.getElementById("newstatus").value
+                });
+                $("#primaryModal").modal("hide");
+              }
+              form.classList.add("was-validated");
+            },
+          }
+
+        });
+
+      })
+      });
+
+
+
+  </script>
+
+</body>
+
+</html>

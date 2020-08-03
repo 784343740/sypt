@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<!--
+* CoreUI - Free Bootstrap Admin Template
+* @version v2.0.0
+* @link https://coreui.io
+* Copyright (c) 2018 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+
+<html lang="zh-CN">
+
+<head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>学生课表</title>
+    <!-- Icons-->
+    <link href="vendors/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+    <link href="vendors/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendors/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <!-- Main styles for this application-->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+        <ol class="breadcrumb" >
+            <li class="breadcrumb-item"> <a>首页</a></li>
+            <li class="breadcrumb-item"><a href="std.html">社团一览</a></li>
+            <li class="breadcrumb-item"><a href="login.html">退出登录</a></li>
+
+            <li class="breadcrumb-menu d-md-down-none">
+            <div class="btn-group" role="group" aria-label="Button group">
+                <a class="btn" href="#">
+                    <i class="icon-speech"></i>
+                </a>
+
+            </div>
+            </li>
+        </ol>
+
+
+    <br>
+    <div id="xs">
+        <div class="modal fade" id="hdxqModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
+                      aria-hidden="true">
+        <form class="needs-validation"  method="get">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" >活动详情</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">举办活动单位</span>
+                                    </div>
+                                    <!--<input class="form-control"  type="text" name="stname"-->
+                                           <!--autocomplete="stname" >-->
+                                    &nbsp;&nbsp;&nbsp;英语协会
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">活动名</span>
+                                    </div>
+                                    <!--<input class="form-control"  type="text" name="hdname"-->
+                                           <!--autocomplete="hdname" >-->
+                                    &nbsp;&nbsp;&nbsp;第十一届外联社
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">活动简介</span>
+                                    </div>
+                                    <!--<input class="form-control"  type="text" name="title"-->
+                                           <!--autocomplete="title" >-->
+                                    &nbsp;&nbsp;&nbsp;共同进步
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">活动时间</span>
+                                    </div>
+                                    <!--<input class="form-control"  type="text" name="hdtime"-->
+                                           <!--autocomplete="hdtime" >-->
+                                    &nbsp;&nbsp;&nbsp;本周一晚上第九节课
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">活动地点</span>
+                                    </div>
+                                    <!--<input class="form-control" type="text" name="where"-->
+                                           <!--autocomplete="where" >-->
+                                    &nbsp;&nbsp;&nbsp;一教311
+
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">退出</button>
+                            <button type="button" class="btn btn-secondary" v-on:click="hdbm()">活动报名</button>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+        <table id="Table1" class="blacktab" bordercolor="Black" border="0" width="100%" >
+            <tr width="100%">
+                <td colspan="2" rowspan="1" width="2%">时间</td>
+                <td align="Center" width="14%">星期一</td>
+                <td align="Center" width="14%">星期二</td>
+                <td align="Center" width="14%">星期三</td>
+                <td align="Center" width="14%">星期四</td>
+                <td align="Center" width="14%">星期五</td>
+                <td class="noprint" align="Center" width="14%">星期六</td>
+                <td class="noprint" align="Center" width="14%">星期日</td>
+            </tr>
+            <tr width="100%">
+                <td colspan="2">早晨</td>
+                <td align="Center" >&nbsp;</td>
+                <td align="Center">&nbsp;</td>
+                <td align="Center">&nbsp;</td>
+                <td align="Center">&nbsp;</td>
+                <td align="Center">&nbsp;</td>
+                <td class="noprint" align="Center">&nbsp;</td>
+                <td class="noprint" align="Center">&nbsp;</td>
+            </tr>
+            <tr width="98%">
+                <td rowspan="4" width="1%">上午</td>
+                <td width="1%">第1节</td>
+                <td class="noprint" width="98%" rowspan="12" colspan="7">
+                    <table width="100%">
+                        <tbody width="100%">
+
+                        <tr wtdth="100%" v-for="(items, index) in pageItems">
+                            <td   bgcolor="aqua" height="140px" width="14%" size="20px" align="center" v-if="(index%2==0)&amp(items.yi!='无')&amp(items.yi!='第十一届外联社')">{{ items.yi }} </td>
+                            <td   bgcolor="#6495ed" height="140px" width="14%" size="20px" align="center" v-if="(index%2==1)&amp(items.yi!='无')&amp(items.yi!='第十一届外联社')">{{ items.yi }} </td>
+                            <td   height="140px" width="14%" size="20px" align="center" v-if="items.yi=='无'"></td>
+
+
+                            <td   bgcolor="#ff69b4" height="140px" width="14%" size="20px" align="center" v-if="(index%2==0)&amp(items.er!='无')">{{ items.er }} </td>
+                            <td   bgcolor="#adff2f" height="140px" width="14%" size="20px" align="center" v-if="(index%2==1)&amp(items.er!='无')">{{ items.er }} </td>
+                            <td   height="140px"  width="14%"  align="center" v-if="items.er=='无'" > </td>
+
+                            <td   bgcolor="aqua" height="140px" width="14%" size="20px" align="center" v-if="(index%2==0)&amp(items.san!='第十一届平面设计大赛')">{{ items.san }} </td>
+                            <td   bgcolor="#6495ed" height="140px" width="14%" size="20px" align="center" v-if="(index%2==1)&amp(items.san!='无')">{{ items.san }} </td>
+                            <td   height="140px"  width="14%"  align="center" v-if="items.san=='无'" > </td>
+                            <td   height="140px"  width="14%"  align="center" v-if="items.san=='第十一届平面设计大赛'" >
+                                <button  v-on:click="cz()" type="button">{{items.san}}</button>
+
+                            </td>
+
+                            <td   bgcolor="ff69b4" height="140px" width="14%" size="20px" align="center" v-if="(index%2==0)&amp(items.si!='无')">{{ items.si }} </td>
+                            <td   bgcolor="#adff2f" height="140px" width="14%" size="20px" align="center" v-if="(index%2==1)&amp(items.si!='无')">{{ items.si }} </td>
+                            <td   height="140px"  width="14%"  align="center" v-if="items.si=='无'" > </td>
+
+                            <td   bgcolor="aqua" height="140px" width="14%" size="20px" align="center" v-if="(index%2==0)&amp(items.wu!='第十三届外联社')">{{ items.wu }} </td>
+                            <td   bgcolor="#6495ed" height="140px" width="14%" size="20px" align="center" v-if="(index%2==1)&amp(items.wu!='无')">{{ items.wu }} </td>
+                            <td   height="140px"  width="14%"  align="center" v-if="items.wu=='无'"> </td>
+                            <td   height="140px"  width="14%"  align="center" v-if="items.wu=='第十三届外联社'" >
+                              <button  v-on:click="cz()" type="button">{{items.wu}}</button>
+
+                            </td>
+
+                            <td   bgcolor="ff69b4" height="140px" width="14%" size="20px" align="center" v-if="(index%2==0)&amp(items.liu!='无')">{{ items.liu }} </td>
+                            <td   bgcolor="#adff2f" height="140px" width="14%" size="20px" align="center" v-if="(index%2==1)&amp(items.liu!='无')">{{ items.liu }} </td>
+                            <td   height="140px"  width="14%"  align="center" v-if="items.liu=='无'" ></td>
+
+                            <td   bgcolor="aqua" height="140px" width="14%" size="20px" align="center" v-if="(index%2==0)&amp(items.qi!='无')">{{ items.qi }} </td>
+                            <td   bgcolor="#6495ed" height="140px" width="14%" size="20px" align="center" v-if="(index%2==1)&amp(items.qi!='无')">{{ items.qi }} </td>
+                            <td   height="140px"  width="14%"  align="center" v-if="items.qi=='无'" > </td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+
+            </tr>
+        <tr>
+            <td>第2节</td>
+
+        </tr>
+        <tr>
+            <td>第3节</td>
+
+        </tr>
+        <tr>
+            <td>第4节</td>
+
+        </tr>
+        <tr>
+            <td rowspan="4" width="1%">下午</td>
+            <td>第5节</td>
+
+        </tr>
+        <tr>
+            <td>第6节</td>
+
+        </tr>
+        <tr>
+            <td>第7节</td>
+
+        </tr>
+        <tr>
+            <td>第8节</td>
+
+        </tr>
+        <tr>
+            <td rowspan="4" width="1%">晚上</td>
+            <td>第9节</td>
+
+        </tr>
+        <tr>
+            <td>第10节</td>
+        </tr>
+        <tr>
+            <td>第11节</td>
+        </tr>
+        <tr>
+            <td>第12节</td>
+
+        </tr>
+    </table>
+    </div>
+        <div id="bm">
+            <div class="modal fade" id="c" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <form class="needs-validation" action="/hdbm/xz" method="get" id="xzk">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="hdbm">活动报名</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="needs-validation" novalidate>
+
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">学号</span>
+                                            </div>
+                                            <input class="form-control"  type="text" name="xsid1" autocomplete="name">
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">姓名</span>
+                                            </div>
+                                            <input class="form-control"  type="text" name="xsname1">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">院系</span>
+                                                <select class="form-control" id="y1">
+                                                    <option> 金融学院</option>
+                                                    <option>信息与技术工程学院</option>
+                                                    <option> 国际学院</option>
+                                                    <option> 护理学院</option>
+                                                    <option> 旅游管理学院</option>
+
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">年级专业</span>
+                                            </div>
+                                            <input class="form-control"  type="text" name="njzy1" autocomplete="name">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">电话</span>
+                                            </div>
+                                            <input class="form-control"  type="tel1" name="tel1" autocomplete="name">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>
+
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" v-on:click="xz()">申请报名</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editModalLabel">申请社团</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="needs-validation" novalidate>
+
+          <div class="form-group">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">社团名字</span>
+                </div>
+                <input class="form-control" v-model="item.name" type="text" name="username3"
+                  pattern="^([\u4e00-\u9fa5.A-Za-z][\u4e00-\u9fa5.A-Za-z0-9-_]{1,10})$" required>
+                <div class="input-group">
+                  <!-- <span class="input-group-text">
+                    <i class="fa fa-user"></i>
+                  </span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">社团简介</span>
+                </div>
+                <input class="form-control" v-model="jj" type="text" name="jj" autocomplete="name">
+                <div class="input-group-append">
+                  <span class="input-group-text">
+                    <i class="fa fa-venus-mars"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">社团地点</span>
+                </div>
+                <input class="form-control" v-model="dd" type="tel1" name="dd" autocomplete="name">
+                <div class="input-group-append">
+                  <span class="input-group-text">
+                    <i class="fa fa-venus-mars"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </form>
+      </div>
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" v-on:click="save()">申请</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src="vendors/jquery/js/jquery.min.js"></script>
+    <script src="vendors/popper.js/js/popper.min.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendors/pace-progress/js/pace.min.js"></script>
+    <script src="vendors/perfect-scrollbar/js/perfect-scrollbar.min.js"></script>
+    <script src="vendors/@coreui/coreui/js/coreui.min.js"></script>
+    <script src="vendors/Mock/mock.js"></script>
+    <script src="vendors/vue/vue.min.js"></script>
+    <script src="vendors/vue/vue.js"></script>
+    <script>
+        var users = [];
+        var users2=[];
+        var users3=[];
+        var users4=[];
+        var app;
+        var app2;
+        var app3;
+        $(function () {
+            $.getJSON("/hd", function (response) {
+                users2 = response;
+                app2 = new Vue({
+                    el: '#xs2',
+                    data: {
+                        items2: users2,
+                        index2: -1,
+                        pageSize2: 12,
+                        pageIndex2: 0,
+                        total2 : users2.length,
+                        pageIndexz2:1,
+                    },
+                    // computed: {
+                    //     // a computed getter
+                    //     pageItems: function () {
+                    //         var startIndex = this.pageIndex*this.pageSize;
+                    //         var endIndex = startIndex+ this.pageSize - 1;
+                    //         return this.items.filter(function(value, index) {
+                    //             return (
+                    //                 index >= startIndex &&
+                    //                 index <= endIndex
+                    //             );
+                    //         });
+                    //     },
+                    // },
+                })
+            });
+            $.getJSON("/rj1702", function (response) {
+                users = response;
+                users3=response;
+                app = new Vue({
+                    el: '#xs',
+                    data: {
+                        items: users,
+                        items3:users3,
+                        index: -1,
+                        pageSize: 12,
+                        pageIndex: 0,
+                        total : users.length,
+                        pageIndexz:1,
+                    },
+                    computed: {
+                        // a computed getter
+                        pageItems: function () {
+                            var startIndex = this.pageIndex*this.pageSize;
+                            var endIndex = startIndex+ this.pageSize - 1;
+                            return this.items.filter(function(value, index) {
+                                return (
+                                    index >= startIndex &&
+                                    index <= endIndex
+                                );
+                            });
+                        },
+
+                    },
+                    methods: {
+                        cz: function () {
+                            $("#hdxqModal").modal("show");
+                        },
+                        hdbm:function () {
+                            $("#hdxqModal").modal("hide");
+                            $("#c").modal("show");
+                        }
+                    }
+                })
+                var i=j=0;
+                for (i=0;i<users2.length;i++){
+                    for(j=0;j<users.length;j++){
+
+                        if((users[j].yi==null)&&(users2[i].hdtime=='yi')&&(users2[i].js==(j+1))){
+                            users[j].yi=users2[i].hdname;
+
+                        }if((users[j].er==null)&&(users2[i].hdtime=='er')&&(users2[i].js==(j+1))){
+                            users[j].er=users2[i].hdname;
+
+                        }if((users[j].san==null)&&(users2[i].hdtime=='san')&&(users2[i].js==(j+1))){
+                            users[j].san=users2[i].hdname;
+
+                        }if((users[j].si==null)&&(users2[i].hdtime=='si')&&(users2[i].js==(j+1))){
+                            users[j].si=users2[i].hdname;
+
+                        }if((users[j].wu==null)&&(users2[i].hdtime=='wu')&&(users2[i].js==(j+1))){
+                            users[j].wu=users2[i].hdname;
+
+                        }if((users[j].liu==null)&&(users2[i].hdtime=='liu')&&(users2[i].js==(j+1))){
+                            users[j].liu=users2[i].hdname;
+
+                        }if((users[j].qi==null)&&(users2[i].hdtime=='qi')&&(users2[i].js==(j+1))){
+                            users[j].qi=users2[i].hdname;
+
+                        }
+                    }
+                }
+            });
+            $.getJSON("/hdbm", function (response) {
+                users4 = response;
+                app3 = new Vue({
+                    el: '#bm',
+                    data: {
+                        items4: users4,
+                        index4: -1,
+                        pageSize4: 12,
+                        pageIndex4: 0,
+                        total4: users4.length,
+                        pageIndexz4:1,
+                    },
+                    // computed: {
+                    //     // a computed getter
+                    //     pageItems: function () {
+                    //         var startIndex = this.pageIndex*this.pageSize;
+                    //         var endIndex = startIndex+ this.pageSize - 1;
+                    //         return this.items.filter(function(value, index) {
+                    //             return (
+                    //                 index >= startIndex &&
+                    //                 index <= endIndex
+                    //             );
+                    //         });
+                    //     },
+                    // },
+                    methods:{
+                        xz:function(){
+                            $.post("/hdbm/xz",
+                                {
+                                    // zt: false,
+                                    // id: app.items.length + 1,
+                                    xsid:document.getElementById("xsid1").value,
+                                    xsname: document.getElementById("xsname1").value,
+                                    y: document.getElementById("y1").value,
+                                    njzy:document.getElementById("njzy1").value,
+                                    tel:document.getElementById("tel1").value,
+                                    hdname:document.getElementById("hdname1").value,
+                                },
+                                function(data,status){
+
+                                });
+                            $("#c").modal("hide");
+                        },
+
+                    }
+                })
+            });
+        });
+
+
+
+        //    st: function (index) {
+        //     var form = document.getElementsByClassName('needs-validation')[0];
+        //     form.classList.remove('was-validated');
+        //     this.hdsqindex = index;
+        //     var user = JSON.parse(JSON.stringify(this.items[index]));
+        //     this.item = user;.
+        //     $("#stModal").modal('show');
+        // };
+        // hdsq: function (index) {
+        //     var form = document.getElementsByClassName('needs-validation')[0];
+        //     form.classList.remove('was-validated');
+        //     this.hdsqindex = index;
+        //     var user = JSON.parse(JSON.stringify(this.items[index]));
+        //     this.item = user;.
+        //     $("#hdModal").modal('show');
+        // };
+    </script>
+</body>
+
+</html>
